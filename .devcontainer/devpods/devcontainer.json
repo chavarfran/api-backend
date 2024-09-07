@@ -17,6 +17,23 @@
             "settings": {},
             "extensions": [
                 //php
+                "bmewburn.vscode-intelephense-client",
+                //laravel
+                "apility.beautify-blade",
+                "shufo.vscode-blade-formatter",
+                "porifa.laravel-intelephense",
+                "codingyu.laravel-goto-view",
+                "TechieCouch.laravel-php-essentials",
+                //identation
+                "EditorConfig.EditorConfig",
+                "junstyle.php-cs-fixer",
+                "mansoorkhan96.php-cs-fixer",
+                "esbenp.prettier-vscode",
+                //git and github
+                "GitHub.vscode-pull-request-github",
+                "eamodio.gitlens",
+                //tools
+                "adpyke.codesnap"
             ]
         }
     },
