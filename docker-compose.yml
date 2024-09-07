@@ -37,7 +37,7 @@ services:
     image: postgres:latest
     environment:
       - DATABASE_HOST=database
-      - POSTGRES_DB=root
+      - POSTGRES_DB=local
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
     ports:
