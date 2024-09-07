@@ -60,6 +60,8 @@ services:
       - "5050:80"
     volumes:
       - database:/var/lib/pgadmin
+    networks:
+      - test-laravel
     depends_on:
       - database
 networks:
