@@ -1,0 +1,26 @@
+{
+    "name": "VSCode container",
+    "dockerComposeFile": [
+        "../../docker-compose.yml"
+    ],
+    "service": "laravel",
+    "shutdownAction": "none",
+    "workspaceFolder": "/var/www/",
+    "features": {
+        "ghcr.io/alanfzf/features/bat:1.0.2": {},
+        "ghcr.io/alanfzf/features/zoxide:latest": {},
+        "ghcr.io/devcontainers-contrib/features/starship:latest": {},
+        "ghcr.io/devcontainers/features/github-cli:latest": {}
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {},
+            "extensions": [
+                //php
+            ]
+        }
+    },
+    "mounts": [
+        "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+    ]
+}
