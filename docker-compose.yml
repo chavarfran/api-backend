@@ -1,10 +1,10 @@
 services:
   # LARAVEL CONTAINER
   laravel: &laravel
-    image: fchavarriar/laravel:amd64
+    image: fchavarriar/laravel
     tty: true
     ports:
-      - "8000:80"
+      - "8001:80"
       - "2222:2222"
     env_file:
       - .env
@@ -46,6 +46,22 @@ services:
       - database:/var/lib/postgresql/data
     networks:
       - test-laravel
+  # PGADMIN CONTAINER
+  pgadmin:
+    user: root
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+    ports:
+      - "5050:80"
+    volumes:
+      - database:/var/lib/pgadmin
+    depends_on:
+      - database
 networks:
   test-laravel:
 volumes:
