@@ -36,7 +36,7 @@ services:
     container_name: postgres
     image: postgres:latest
     environment:
-      - DATABASE_HOST=database
+      - DATABASE_HOST=127.0.0.1
       - POSTGRES_DB=local
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
